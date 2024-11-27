@@ -631,7 +631,6 @@ export const AgentRunning = ({
                       <Box
                         borderRadius="10px"
                         background="linear-gradient(268.17deg, #0C0B20 6.09%, #2D2A3D 82.17%)"
-                        hidden={!settings.openAIKey}
                         ml={3}
                       >
                         <Tooltip

@@ -251,16 +251,6 @@ export const AgentRunning = ({
 
   const callAgent = React.useCallback(
     async (isFeedback = false) => {
-      if (runNumber > 3) {
-        if (!settings.mustSetKey) {
-          setSettings({ ...settings, mustSetKey: true });
-        }
-        if (!settings.openAIKey) {
-          setShowSettings(true);
-          return;
-        }
-      }
-
       setLoading(true);
       try {
         const cmd = isFeedback ? "human_feedback" : agent.command;
